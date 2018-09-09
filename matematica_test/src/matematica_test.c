@@ -10,6 +10,7 @@
 
 #include <CUnit/basic.h>
 #include "print_results/matematica/matematica.h"
+#include "print_results/is_valid/is_valid.h"
 
 #define INT_MAX 1000
 #define INT_MIN -INT_MAX

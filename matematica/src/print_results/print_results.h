@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include "print_results/matematica/matematica.h"
+#include "is_valid/is_valid.h"
 
 /**
  * Stampa a video i risultati

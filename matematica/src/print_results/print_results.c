@@ -17,7 +17,6 @@ static const char* PRINT_SUCC = "\nSuccessivo di %d: %d";
 static const char* PRINT_PRED = "\nPrecedente di %d: %d";
 static const char* PRINT_MAX = "\nMaggiore dei due numeri: %d";
 static const char* PRINT_MIN = "\nMinore dei due numeri: %d";
-static const int FACT_MAX = 12;
 
 static void print_min(int a, int b){
 	printf(PRINT_MIN, min(a, b));
@@ -48,7 +47,7 @@ static void print_product(int a, int b){
 }
 
 static void print_factorial(int a){
-	(a <= FACT_MAX) ?
+	(is_valid_fact(a)) ?
 			printf(PRINT_FACT, a, factorial(a)) :
 			printf(PRINT_NOT_VALID_FACT, a);
 }
