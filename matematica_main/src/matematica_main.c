@@ -8,10 +8,16 @@
  ============================================================================
  */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "intro/intro.h"
+#include "get_numbers/get_numbers.h"
+#include "print_results/print_results.h"
 
 int main(void) {
-	puts("!!!Hello World!!!"); /* prints !!!Hello World!!! */
+	intro();
+	int a = get_first_number();
+	printf("%d",a);
+	int b = get_second_number();
+	printf("%d",b);
+	print_results(a,b);
 	return EXIT_SUCCESS;
 }

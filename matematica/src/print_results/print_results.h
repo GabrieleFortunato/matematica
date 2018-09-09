@@ -8,6 +8,9 @@
 #ifndef PRINT_RESULTS_PRINT_RESULTS_H_
 #define PRINT_RESULTS_PRINT_RESULTS_H_
 
+#include <stdio.h>
+#include "print_results/matematica/matematica.h"
+
 /**
  * Stampa a video i risultati
  * @param a
