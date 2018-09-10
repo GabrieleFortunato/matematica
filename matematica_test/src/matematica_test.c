@@ -57,6 +57,7 @@ void test_sum(void) {
 	CU_ASSERT_TRUE(sum(INT_MAX,0) == INT_MAX);
 	CU_ASSERT_TRUE(sum(0,INT_MIN) == INT_MIN);
 	CU_ASSERT_TRUE(sum(0,INT_MAX) == INT_MAX);
+	CU_ASSERT_TRUE(sum(0,INT_MIN) == sum(INT_MIN,0));
 	CU_ASSERT_TRUE(sum(0,0) == 0);
 	CU_ASSERT_TRUE(sum(INT_MIN,INT_MIN+1) == sum(INT_MIN,INT_MIN)+1);
 	CU_ASSERT_TRUE(sum(INT_MIN+1,INT_MIN) == sum(INT_MIN,INT_MIN)+1);
@@ -69,6 +70,8 @@ void test_subtract(void) {
 	CU_ASSERT_TRUE(subtract(0,INT_MIN) == -INT_MIN);
 	CU_ASSERT_TRUE(subtract(0,INT_MAX) == -INT_MAX);
 	CU_ASSERT_TRUE(subtract(INT_MIN,INT_MIN) == 0);
+	CU_ASSERT_TRUE(subtract(INT_MAX,0) == INT_MAX);
+	CU_ASSERT_TRUE(subtract(INT_MIN,0) == -subtract(0,INT_MIN));
 	CU_ASSERT_TRUE(subtract(INT_MIN,INT_MIN+1) == subtract(INT_MIN,INT_MIN)-1);
 	CU_ASSERT_TRUE(subtract(INT_MAX,INT_MIN+1) == subtract(INT_MAX,INT_MIN)-1);
 	CU_ASSERT_TRUE(subtract(INT_MIN,INT_MAX-1) == subtract(INT_MIN,INT_MAX)+1);
@@ -80,6 +83,7 @@ void test_subtract(void) {
 void test_product(void) {
 	CU_ASSERT_TRUE(product(INT_MIN,0) == 0);
 	CU_ASSERT_TRUE(product(INT_MAX,0) == 0);
+	CU_ASSERT_TRUE(product(INT_MAX,0) == product(INT_MIN,0));
 	CU_ASSERT_TRUE(product(0,INT_MIN) == 0);
 	CU_ASSERT_TRUE(product(0,INT_MAX) == 0);
 	CU_ASSERT_TRUE(product(INT_MIN,INT_MIN+1) == product(INT_MIN,INT_MIN)+INT_MIN);
@@ -88,6 +92,8 @@ void test_product(void) {
 
 void test_factorial(void) {
 	CU_ASSERT_TRUE(factorial(0) == 1);
+	CU_ASSERT_TRUE(factorial(1) == 1);
+	CU_ASSERT_TRUE(factorial(0) == factorial(1));
 	CU_ASSERT_TRUE(factorial(FACT_MAX) == FACT_MAX * factorial(pred(FACT_MAX)));
 }
 
