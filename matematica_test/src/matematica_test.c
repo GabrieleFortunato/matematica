@@ -91,6 +91,16 @@ void test_factorial(void) {
 	CU_ASSERT_TRUE(factorial(FACT_MAX) == FACT_MAX * factorial(pred(FACT_MAX)));
 }
 
+void test_is_valid_fact(void) {
+	CU_ASSERT_FALSE(is_valid_fact(-1));
+	CU_ASSERT_TRUE(is_valid_fact(0));
+	CU_ASSERT_TRUE(is_valid_fact(1));
+	CU_ASSERT_TRUE(is_valid_fact(6));
+	CU_ASSERT_TRUE(is_valid_fact(11));
+	CU_ASSERT_TRUE(is_valid_fact(12));
+	CU_ASSERT_FALSE(is_valid_fact(13));
+}
+
 int init_suite_default(void) {
 	return 0;
 }
@@ -106,6 +116,7 @@ int main() {
 	CU_pSuite pSuite_sum = CU_add_suite("Suite_SUM", init_suite_default, clean_suite_default);
 	CU_pSuite pSuite_prod_sub = CU_add_suite("Suite_PROD-SUB", init_suite_default, clean_suite_default);
 	CU_pSuite pSuite_fact = CU_add_suite("Suite_FACTORIAL", init_suite_default, clean_suite_default);
+	CU_pSuite pSuite_valid = CU_add_suite("Suite_IS-VALID", init_suite_default, clean_suite_default);
 	CU_add_test(pSuite_succ_pred, "test of succ()", test_succ);
 	CU_add_test(pSuite_succ_pred, "test of pred()", test_pred);
 	CU_add_test(pSuite_min_max, "test of min()", test_min);
@@ -114,6 +125,7 @@ int main() {
 	CU_add_test(pSuite_prod_sub, "test of subtract()", test_subtract);
 	CU_add_test(pSuite_prod_sub, "test of product()", test_product);
 	CU_add_test(pSuite_fact, "test of factorial()", test_factorial);
+	CU_add_test(pSuite_valid, "test of is_valid_fact()", test_is_valid_fact);
 	CU_basic_set_mode(CU_BRM_VERBOSE);
 	CU_basic_run_tests();
 	CU_cleanup_registry();
