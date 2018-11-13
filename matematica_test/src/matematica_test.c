@@ -117,16 +117,16 @@ int clean_suite_default(void) {
 
 int main() {
 	CU_initialize_registry();
-	CU_pSuite pSuite_succ_pred = CU_add_suite("Suite_SUCC-PRED", init_suite_default, clean_suite_default);
 	CU_pSuite pSuite_min_max = CU_add_suite("Suite_MIN-MAX", init_suite_default, clean_suite_default);
+	CU_pSuite pSuite_succ_pred = CU_add_suite("Suite_SUCC-PRED", init_suite_default, clean_suite_default);
 	CU_pSuite pSuite_sum = CU_add_suite("Suite_SUM", init_suite_default, clean_suite_default);
 	CU_pSuite pSuite_prod_sub = CU_add_suite("Suite_PROD-SUB", init_suite_default, clean_suite_default);
 	CU_pSuite pSuite_fact = CU_add_suite("Suite_FACTORIAL", init_suite_default, clean_suite_default);
 	CU_pSuite pSuite_valid = CU_add_suite("Suite_IS-VALID", init_suite_default, clean_suite_default);
-	CU_add_test(pSuite_succ_pred, "test of succ()", test_succ);
-	CU_add_test(pSuite_succ_pred, "test of pred()", test_pred);
 	CU_add_test(pSuite_min_max, "test of min()", test_min);
 	CU_add_test(pSuite_min_max, "test of max()", test_max);
+	CU_add_test(pSuite_succ_pred, "test of succ()", test_succ);
+	CU_add_test(pSuite_succ_pred, "test of pred()", test_pred);
 	CU_add_test(pSuite_sum, "test of sum()", test_sum);
 	CU_add_test(pSuite_prod_sub, "test of subtract()", test_subtract);
 	CU_add_test(pSuite_prod_sub, "test of product()", test_product);

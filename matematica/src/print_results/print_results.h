@@ -17,6 +17,6 @@
  * @param a
  * @param b
  */
-void print_results(int b, int a);
+void print_results(int a, int b);
 
 #endif /* PRINT_RESULTS_PRINT_RESULTS_H_ */

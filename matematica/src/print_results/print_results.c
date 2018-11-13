@@ -52,7 +52,7 @@ static void print_factorial(int a){
 			printf(PRINT_NOT_VALID_FACT, a);
 }
 
-void print_results(int b, int a){
+void print_results(int a, int b){
 	print_min(a, b);
 	print_max(a, b);
 	print_pred(a);

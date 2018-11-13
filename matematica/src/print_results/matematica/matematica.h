@@ -40,7 +40,7 @@ int succ(int a);
 
 /**
  * Restituisce la somma dei due parametri
- * Richiama le funzioni succe e pred
+ * Richiama le funzioni succ e pred
  * @param a
  * @param b
  * @return
