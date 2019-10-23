@@ -8,7 +8,6 @@
  ============================================================================
  */
 
-#include <stdlib.h>
 #include "access/access.h"
 #include "close/close.h"
 #include "intro/intro.h"
@@ -24,10 +23,8 @@ void print_access(){
 
 void matematica(){
 	intro();
-	int a = get_first_number();
-	int b = get_second_number();
-	print_results(a, b);
-	(repeat()) ? matematica() : close();
+	print_results(get_second_number(), get_first_number());
+	repeat() ? matematica() : close();
 }
 
 int main(void) {
