@@ -96,15 +96,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="access_8h.html">access.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="access_8h.html#a7d555d14ddb3c0eb48a8e34bf475bbba">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="access_8c.html#a7d555d14ddb3c0eb48a8e34bf475bbba">print_access_on_file</a>(FILE* file){</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    time_t ora = time(NULL);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    fputs((<span class="keywordtype">char</span>*) asctime(localtime(&amp;ora)) , file);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    assert(file != NULL);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    time_t ora = time(NULL);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    fputs((<span class="keywordtype">char</span>*) asctime(localtime(&amp;ora)) , file);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
 <div class="ttc" id="access_8c_html_a7d555d14ddb3c0eb48a8e34bf475bbba"><div class="ttname"><a href="access_8c.html#a7d555d14ddb3c0eb48a8e34bf475bbba">print_access_on_file</a></div><div class="ttdeci">void print_access_on_file(FILE *file)</div><div class="ttdef"><b>Definition:</b> <a href="access_8c_source.html#l00010">access.c:10</a></div></div>
 <div class="ttc" id="access_8h_html"><div class="ttname"><a href="access_8h.html">access.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 1 2018 21:19:52 for matematica by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Nov 11 2019 09:30:15 for matematica by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

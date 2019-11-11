@@ -8,11 +8,14 @@
 #ifndef SRC_ACCESS_ACCESS_H_
 #define SRC_ACCESS_ACCESS_H_
 
+#include <assert.h>
 #include <stdio.h>
 #include <time.h>
 
 /**
  * Stampa su file la data e l'ora dell'accesso al programma
+ * @pre il file deve essere aperto
+ * @param file
  */
 void print_access_on_file(FILE* file);
 
